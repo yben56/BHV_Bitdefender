@@ -1,0 +1,18 @@
+{
+  "name": "zero-knowledge",
+  "version": "0.0.1",
+  "description": "Client side encryption the browser",
+  "main": "index.js",
+  "scripts": {
+    "compile:js": "cp node_modules/openpgp/dist/openpgp.min.js* public/assets/js/ext && cp node_modules/jquery/dist/jquery.min* public/assets/js/ext && cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js* public/assets/js/ext ",
+    "test": "echo \"Error: no test specified at this time\" && exit 1"
+  },
+  "author": "bhv",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "5.3.3",
+    "jquery": "^3.7.1",
+    "npx": "^10.2.2",
+    "openpgp": "^5.11.3"
+  }
+}

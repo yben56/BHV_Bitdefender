@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+    <defs>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff00" />
+            <stop offset="100%" stop-color="#305e93" />
+        </linearGradient>
+    </defs>
+
+    <!-- Feste Hintergrundfarbe -->
+    <rect width="1920" height="1080" fill="#305e93ff" />
+
+    <!-- Obere Welle -->
+    <path d="M0,150 C500,50 1400,250 1920,150 L1920,0 L0,0 Z" fill="#ffffff33" opacity="0.4" transform="rotate(2 960 540)" />
+
+    <!-- Erste mittlere Welle -->
+    <path d="M0,500 C400,650 1500,350 1920,500 L1920,1080 L0,1080 Z" fill="#ffffff22" opacity="0.35" transform="rotate(3 960 540)" />
+
+    <!-- Zweite mittlere Welle -->
+    <path d="M0,600 C600,500 1000,900 1920,600 L1920,1080 L0,1080 Z" fill="#ffffff11" opacity="0.3" transform="rotate(-4 960 540)" />
+
+    <!-- Untere große Welle mit Farbverlauf -->
+    <path d="M0,700 C500,600 1200,800 1920,700 L1920,1080 L0,1080 Z" fill="url(#grad2)" opacity="0.5" transform="rotate(-2 960 540)" />
+</svg>

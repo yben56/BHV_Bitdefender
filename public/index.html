@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="expires" content="0" />
+  <meta charset="utf-8">
+  <meta name="language" content="en_US" />
+  <meta name="author" content="Quant2Cipher" />
+  <meta name="company" content="Quant2Cipher" />
+  <meta name="description" content="Quant2cipher" />
+  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self';">
+
+  <script type="text/javascript" src="/assets/js/ext/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/ext/jquery.min.js"></script>
+  <script defer type="text/javascript" src="/assets/js/ext/openpgp.min.js"></script>
+  
+  <script defer  type="module" src="/assets/js/script.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Quant2cipher" />
+  <link rel="manifest" href="/assets/img/site.webmanifest" />
+  <meta name="msapplication-TileImage" content="https://bhv.de/wp-content/uploads/2018/11/bhv-apple-fav-icon-72x72.png">
+
+  <title>Quant2cipher</title>
+</head>
+
+<body>
+  <main>
+    <div class="row">
+      <div class="container me-3 p-3 bg-primary text-white w-100">
+        <div id="userConfig" data-dm="" data-asd="" data-al=""></div>
+        <div class="row">
+          <div class="col ms-4 d-none d-lg-inline-block">
+            <a href="/"><img class="logo" src="/assets/img/logo-full.svg"></a>
+          </div>
+          <div class="col ms-4 d-lg-none">
+            <img class="logo" src="/assets/img/logo.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-md-1"></div>
+      <div class="col align-text-top p-3 float-start">
+        <div class="m-3">
+          <h4 class="mb-4"><span class="text-secondary">Load private key</span><br></h4>
+          <form name="loadkey" action="#" autocomplete="off">
+              <div class="card mb-4 rounded-4 bg-light-subtle border-0 shadow-sm bg-white bg-opacity-75 col-12 col-md-10">
+                  <div class="card-body">
+                      <div class="mb-3 row">
+                          <label for="updated" class="col-sm-3 col-form-label">Created on:</label>
+                          <div class="col-sm-6">
+                              <span class="privkey-date"></span>
+                              <div id="key-timestamp"></div>
+                          </div>
+                      </div>
+                      <div class="mb-3 row">
+                          <label for="loaded" class="col-sm-3 col-form-label">Key loaded successfully:</label>
+                          <div class="col-sm-6">
+                              <i class="bi bi-check-circle-fill text-success visually-hidden privkey-loaded"></i>
+                              <i class="bi bi-x-circle-fill text-danger visually-hidden privkey-loaded-error"></i>
+                              <span class="text-danger privkey-error"></span>
+                          </div>
+                      </div>
+                      <div class="mb-3 row">
+                          <label for="key-file" class="col-sm-3 col-form-label">Private key file:</label>
+                          <div class="col-sm-6">
+                              <input class="form-control" type="file" id="key-file" accept=".key,.asc,.pgp" required>
+                              <div class="mb-3 text-danger file-error mt-2 d-none">Upload error! (File must be in .key, .asc, or .pgp format.)</div>
+                          </div>   
+                      </div>
+                      <div class="mb-3 row">
+                          <label for="password" class="col-sm-3 col-form-label">Key password:</label>
+                          <div class="col-sm-6">
+                              <input type="hidden" name="id" id="user-id" value="">
+                              <div class="input-group mb-3 rounded-start-2">
+                                  <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                  <input type="password" autocomplete="off" id="loadPassword" name="password" class="form-control password-field" placeholder="Password for private key - required" required>
+                                  <span class="input-group-text cursor-pointer btn-toggle-password"><i class="bi bi-eye-slash toggle-icon"></i></span>
+                              </div>
+                              <div class="mb-3 text-danger password-error mt-2 d-none">Password must be at least 8 characters and include letters and numbers.</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-10">
+                  <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+                      <div class="d-flex flex-column flex-md-row gap-2 flex-xl-column-reverse ms-md-auto">
+                          <button id="btn-load-key" class="btn btn-primary bg-gradient text-white text-nowrap">Load key &nbsp;<i class="bi bi-upload"></i></button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="position-fixed bottom-0 w-100 shadow ">
+      <div class="bg-dark text-white p-4">
+        <div class="row w-100">
+          <div class="col text-center">
+            <span class="small"><i class="bi bi-c-circle"></i> Copyright 2024 - 2025 Quant2Cipher</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
