@@ -75,6 +75,7 @@ $(function () {
         }
 
         // 8. clear sensitive data from memory
+        $('#loadPassword').val('');
         decryptResult = null;
         password = null;
 
